@@ -16,7 +16,9 @@ void MainWindow::createFileModel(){
     fileModel->setFilter(QDir::AllEntries);
     fileModel->setRootPath(QDir::homePath());
     ui->lvFiles->setModel(fileModel);
-    connect(ui->lvFiles, SIGNAL(doubleClicked(QModelIndex)),this, SLOT(on_lvFiles_doubleClicked(QModelIndex)));
+    ui->lvFiles->setSelectionRectVisible(true);
+    ui->lvFiles->setSelectionMode(QAbstractItemView::ExtendedSelection);
+    connect(ui->lvFiles, SIGNAL(doubleClicked(QModelIndex)),this, SLOT(onLvFilesDoubleClicked(QModelIndex)));
 }
 
 void MainWindow::createActions(){
@@ -36,7 +38,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_lvFiles_doubleClicked(const QModelIndex &index)
+void MainWindow::onLvFilesDoubleClicked(const QModelIndex &index)
 {
     QListView* listView = (QListView*)sender();
     QFileInfo fileInfo = fileModel->fileInfo(index);

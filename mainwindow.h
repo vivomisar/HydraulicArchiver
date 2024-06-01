@@ -19,7 +19,7 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_lvFiles_doubleClicked(const QModelIndex &index);
+    void onLvFilesDoubleClicked(const QModelIndex &index);
 
 private:
     Ui::MainWindow *ui;

@@ -5,7 +5,8 @@
 #include <QFileSystemModel>
 
 QT_BEGIN_NAMESPACE
-namespace Ui {
+namespace Ui
+{
 class MainWindow;
 }
 QT_END_NAMESPACE
@@ -19,11 +20,13 @@ public:
     ~MainWindow();
 
 private slots:
+    void about();
     void onLvFilesDoubleClicked(const QModelIndex &index);
 
 private:
     Ui::MainWindow *ui;
     QFileSystemModel *fileModel;
+    QMenu *helpMenu;
     QToolBar *fileToolBar;
     QAction *addToAct;
     QAction *extractAct;

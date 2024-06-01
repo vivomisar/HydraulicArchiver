@@ -36,7 +36,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         lvFiles = new QListView(centralwidget);
         lvFiles->setObjectName("lvFiles");
-        lvFiles->setGeometry(QRect(10, 40, 781, 511));
+        lvFiles->setGeometry(QRect(10, 20, 781, 531));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");

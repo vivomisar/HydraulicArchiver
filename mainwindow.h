@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QFileSystemModel>
+#include <QToolBar>
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -21,6 +22,8 @@ public:
 
 private slots:
     void about();
+    void addTo();
+    void extract();
     void onLvFilesDoubleClicked(const QModelIndex &index);
 
 private:

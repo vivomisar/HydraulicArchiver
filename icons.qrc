@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>AddButton.png</file>
+        <file>ExtractButton.png</file>
+    </qresource>
+</RCC>

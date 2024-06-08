@@ -36,7 +36,14 @@ void MainWindow::createActions()
 
 void MainWindow::createToolBars()
 {
+    QPixmap addPix(":/AddButton.png");
+    QPixmap extractPix(":/ExtractButton.png");
     fileToolBar = addToolBar("Toolbar");
+    addToAct = fileToolBar->addAction(QIcon(addPix), "Add to...");
+    extractAct = fileToolBar->addAction(QIcon(extractPix), "Extract...");
+
+    connect(addToAct, SIGNAL(triggered()), SLOT(addTo()));
+    connect(extractAct, SIGNAL(triggered()), SLOT(extract()));
 }
 
 void MainWindow::createMenus()
@@ -54,6 +61,16 @@ MainWindow::~MainWindow()
 void MainWindow::about()
 {
     QMessageBox::about(this, tr("About Hydraulic Archiver"), tr("OK"));
+}
+
+void MainWindow::addTo()
+{
+
+}
+
+void MainWindow::extract()
+{
+
 }
 void MainWindow::onLvFilesDoubleClicked(const QModelIndex &index)
 {

@@ -18,8 +18,12 @@ public:
     AddToDialog(QModelIndexList& list, QWidget *parent = nullptr);
     ~AddToDialog();
 
+private slots:
+    void add();
+
 private:
     Ui::AddToDialog *ui;
+    QModelIndexList list;
 };
 
 #endif // ADDTODIALOG_H

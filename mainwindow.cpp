@@ -68,6 +68,12 @@ void MainWindow::about()
 void MainWindow::addTo()
 {
     auto selectedFiles = ui->lvFiles->selectionModel()->selectedIndexes();
+    if(selectedFiles.isEmpty()) {
+        QMessageBox warning;
+        warning.setText("You must select files or folders");
+        warning.exec();
+        return;
+    }
     AddToDialog dialog(selectedFiles, this);
     dialog.exec();
 }

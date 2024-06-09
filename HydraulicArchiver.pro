@@ -9,18 +9,21 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    addtodialog.cpp \
     huffmancoder.cpp \
     main.cpp \
     mainwindow.cpp \
     statistics.cpp
 
 HEADERS += \
+    addtodialog.h \
     coder.h \
     huffmancoder.h \
     mainwindow.h \
     statistics.h
 
 FORMS += \
+    addtodialog.ui \
     mainwindow.ui
 
 # Default rules for deployment.

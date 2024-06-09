@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "addtodialog.h"
 #include <QMessageBox>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -65,7 +67,9 @@ void MainWindow::about()
 
 void MainWindow::addTo()
 {
-
+    auto selectedFiles = ui->lvFiles->selectionModel()->selectedIndexes();
+    AddToDialog dialog(selectedFiles, this);
+    dialog.exec();
 }
 
 void MainWindow::extract()
